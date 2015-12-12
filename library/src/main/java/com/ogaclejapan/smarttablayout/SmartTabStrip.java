@@ -56,25 +56,25 @@ class SmartTabStrip extends LinearLayout {
   private static final int DEFAULT_INDICATOR_GRAVITY = GRAVITY_BOTTOM;
   private static final boolean DEFAULT_DRAW_DECORATION_AFTER_TAB = false;
 
-  private final int topBorderThickness;
-  private final int topBorderColor;
-  private final int bottomBorderThickness;
-  private final int bottomBorderColor;
-  private final Paint borderPaint;
-  private final RectF indicatorRectF = new RectF();
-  private final boolean indicatorWithoutPadding;
-  private final boolean indicatorAlwaysInCenter;
-  private final boolean indicatorInFront;
-  private final int indicatorThickness;
-  private final int indicatorWidth;
-  private final int indicatorGravity;
-  private final float indicatorCornerRadius;
-  private final Paint indicatorPaint;
-  private final int dividerThickness;
-  private final Paint dividerPaint;
-  private final float dividerHeight;
-  private final SimpleTabColorizer defaultTabColorizer;
-  private final boolean drawDecorationAfterTab;
+  private int topBorderThickness;
+  private int topBorderColor;
+  private int bottomBorderThickness;
+  private int bottomBorderColor;
+  private Paint borderPaint;
+  private RectF indicatorRectF = new RectF();
+  private boolean indicatorWithoutPadding;
+  private boolean indicatorAlwaysInCenter;
+  private boolean indicatorInFront;
+  private int indicatorThickness;
+  private int indicatorWidth;
+  private int indicatorGravity;
+  private float indicatorCornerRadius;
+  private Paint indicatorPaint;
+  private int dividerThickness;
+  private Paint dividerPaint;
+  private float dividerHeight;
+  private SimpleTabColorizer defaultTabColorizer;
+  private boolean drawDecorationAfterTab;
 
   private int lastPosition;
   private int selectedPosition;
@@ -215,6 +215,11 @@ class SmartTabStrip extends LinearLayout {
 
   void setCustomTabColorizer(SmartTabLayout.TabColorizer customTabColorizer) {
     this.customTabColorizer = customTabColorizer;
+    invalidate();
+  }
+
+  void setUnderlineColor(int color) {
+    this.bottomBorderColor = color;
     invalidate();
   }
 

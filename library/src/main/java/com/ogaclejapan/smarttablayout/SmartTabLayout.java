@@ -223,6 +223,10 @@ public class SmartTabLayout extends HorizontalScrollView {
     tabStrip.setCustomTabColorizer(tabColorizer);
   }
 
+  public void setUnderlineColor(int color) {
+    tabStrip.setUnderlineColor(color);
+  }
+
   /**
    * Set the color used for styling the tab text. This will need to be called prior to calling
    * {@link #setViewPager(android.support.v4.view.ViewPager)} otherwise it will not get set
